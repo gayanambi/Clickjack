@@ -27,7 +27,7 @@ def check_clickjacking_vulnerability(url):
         if "x-frame-options" in response.headers:
             return f"{GREEN}✓ Not vulnerable{END}"
         if "window.self !== window.top" in response.text:
-        return
+        
             return f"{GREEN}✓ Not vulnerable{END}"
 
     return f"{RED}✗ Vulnerable{END}"
